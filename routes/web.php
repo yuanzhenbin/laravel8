@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::any('Index/index', [\App\Http\Controllers\IndexController::class,'index']);
+
+Route::any('Admin/index', [\App\Http\Controllers\AdminController::class,'index']);
+
+Route::get('User/index', [\App\Http\Controllers\UserController::class,'index']);
+Route::post('User/index', [\App\Http\Controllers\UserController::class,'indexAjax']);

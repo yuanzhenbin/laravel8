@@ -1,0 +1,132 @@
+/*原生标签*/
+a {
+    color: #0085ff;
+}
+a:hover{
+    color: #ff8500;
+}
+body{
+    background: #f5f5f5;
+}
+input{
+    border: 1px solid #cfcfcf;
+    border-radius: 2px;
+    padding-left: 5px;
+    height: 20px;
+    line-height: 20px;
+}
+
+
+/*自定义样式*/
+.content{
+    background: #ffffff;
+    max-width: 1400px;
+    min-height: 522px;
+    margin: 30px 10%;
+    padding: 50px 30px;
+}
+.left_content{
+    background: #ffffff;
+    max-width: 1400px;
+    min-height: 522px;
+    margin: 10px 50% 30px 10px;
+    padding: 50px 30px;
+}
+.top_row{
+    width: 100%;
+    min-height: 32px;
+    display: block;
+    margin-bottom: 10px;
+}
+.top_row_line{
+    width: 100%;
+    min-height: 32px;
+    display: block;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cfcfcf;
+}
+.div_line{
+    border-bottom: 1px solid #cfcfcf;
+}
+.div_row{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.div_col{
+    vertical-align: top;
+    display: inline-block;
+    min-width: 100px;
+    margin-top: 10px;
+    padding: 10px;
+}
+.div_left{
+    display: inline-block;
+    width: 80px;
+    line-height: 22px;
+    text-align: right;
+    vertical-align: middle;
+}
+.div_right{
+    display: inline-block;
+    width: 200px;
+    line-height: 22px;
+    vertical-align: middle;
+}
+.blue_button{
+    background: #0085ff;
+    color: #ffffff;
+    display: inline-block;
+    border: 1px solid #0085ff;
+    border-radius: 2px;
+    line-height: 28px;
+    text-align: center;
+    min-width: 70px;
+    cursor: pointer;
+    margin-right: 5px;
+    padding: 0 5px;
+}
+.blue_button:hover{
+    color:#ffffff !important;
+    background: #0095ff;
+}
+.orange_button{
+    background: #ff8500;
+    color: #ffffff;
+    display: inline-block;
+    border: 1px solid #ff8500;
+    border-radius: 2px;
+    line-height: 28px;
+    text-align: center;
+    min-width: 70px;
+    cursor: pointer;
+    margin-right: 5px;
+    padding: 0 5px;
+}
+.orange_button:hover{
+    color:#ffffff !important;
+    background: #ff9500;
+}
+.grey_button{
+    background: #ffffff;
+    color: #333333;
+    display: inline-block;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    line-height: 28px;
+    text-align: center;
+    min-width: 70px;
+    cursor: pointer;
+    margin-right: 5px;
+    padding: 0 5px;
+}
+.grey_button:hover{
+    color:#333333 !important;
+    background: #f5f5f5;
+}
+
+
+/*layui*/
+.layui-table-page {
+    text-align: center;
+}
