@@ -24,37 +24,37 @@
             <div class="div_row">
                 <div class="div_left">账号：</div>
                 <div class="div_right">
-                    {$data['account']}
+                    {{$data->account}}
                 </div>
             </div>
             <div class="div_row">
                 <div class="div_left">姓名：</div>
                 <div class="div_right">
-                    <input type="text" autocomplete="off" id="name" value="{$data['name']}">
+                    <input type="text" autocomplete="off" id="name" value="{{$data->name}}">
                 </div>
             </div>
             <div class="div_row">
                 <div class="div_left">电话：</div>
                 <div class="div_right">
-                    <input type="text" autocomplete="off" id="phone" value="{$data['phone']}">
+                    <input type="text" autocomplete="off" id="phone" value="{{$data->phone}}">
                 </div>
             </div>
             <div class="div_row">
                 <div class="div_left">邮箱：</div>
                 <div class="div_right">
-                    <input type="text" autocomplete="off" id="email" value="{$data['email']}">
+                    <input type="text" autocomplete="off" id="email" value="{{$data->email}}">
                 </div>
             </div>
             <div class="div_row">
                 <div class="div_left">性别：</div>
                 <div class="div_right">
-                    <input type="text" autocomplete="off" id="sex" value="{$data['sex']}">
+                    <input type="text" autocomplete="off" id="sex" value="{{$data->sex}}">
                 </div>
             </div>
             <div class="div_row">
                 <div class="div_left">状态：</div>
                 <div class="div_right">
-                    {$data['status_show']}
+                    {{$data->status_show}}
                 </div>
             </div>
             <hr>

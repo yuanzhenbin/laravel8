@@ -38,7 +38,7 @@
                 </div>
             </div>
             <div style="width: 25%; height: 90px; vertical-align: top; display: inline-block; position: relative;">
-                <img src="/photo/snowflake.ico" alt="" width="120" height="120" style="position: absolute; top: -15px; left: -10px">
+                <img src="/static/image/grape.ico" alt="" width="120" height="120" style="position: absolute; top: -15px; left: -10px">
             </div>
         </div>
     </div>
@@ -59,7 +59,7 @@
             var password = $("#password").val();
 
             $.ajax({
-                url : '{:url("Login/login")}',
+                url : '{{url("Login/login")}}',
                 data: {
                     account:account,
                     password:password,

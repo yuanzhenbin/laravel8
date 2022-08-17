@@ -23,19 +23,19 @@
             <td>状态</td>
             <td>操作</td>
         </tr>
-        {foreach $data as $k=>$v }
+        @foreach ($data as $k=>$v)
         <tr>
-            <td>{$v['id']}</td>
-            <td>{$v['name']}</td>
-            <td>{$v['phone']}</td>
-            <td>{$v['sex_show']}</td>
-            <td>{$v['status_show']}</td>
+            <td>{{$v->id}}</td>
+            <td>{{$v->name}}</td>
+            <td>{{$v->phone}}</td>
+            <td>{{$v->sex_show}}</td>
+            <td>{{$v->status_show}}</td>
             <td>
                 <!--<a href="">修改</a>|-->
                 <!--<a href="">删除</a>-->
             </td>
         </tr>
-        {/foreach}
+        @endforeach
     </table>
 
     <div style="width: 100%;">
@@ -44,7 +44,7 @@
             <span style="float: left" class="blue_button" id="check_btn">验证器</span>
             <span style="float: right" class="blue_button" id="add_btn">添加用户</span>
             <span style="float: right;" class="grey_button" id="search_btn">搜索</span>
-            <input type="text" id="search" style="float: right; height: 28px; margin-right: 5px;">
+            <input type="text" id="search" style="float: right; height: 28px; margin-right: 5px;" placeholder="账号/电话">
         </div>
         <div>
             <table class="layui-hide" id="data_table" lay-filter="data_table"></table>

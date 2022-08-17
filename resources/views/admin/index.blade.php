@@ -14,7 +14,7 @@
 <body>
 <div class="content">
     <div class="top_row_line">
-        <span class="grey_button" style="float: right" id="logout">退出{{$name}}</span>
+        <span class="grey_button" style="float: right" id="logout">退出</span>
         <a class="blue_button" style="float: right" href="{{url('User/info')}}">个人中心</a>
         <span style="float: right; display: inline-block; border-bottom: 1px solid #0085ff; line-height: 29px; margin-right: 10px; padding: 0 5px;">欢迎&nbsp;{{session('uname')}}&nbsp;!</span>
     </div>

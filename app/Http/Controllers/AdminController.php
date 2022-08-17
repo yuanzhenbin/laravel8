@@ -13,6 +13,6 @@ class AdminController extends BaseController
 
     public function index()
     {
-        return view("admin.index",['name'=>'admin']);
+        return view("admin.index");
     }
 }
