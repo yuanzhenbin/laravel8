@@ -6,6 +6,8 @@ use \App\Http\Controllers\AdminController;
 use \App\Http\Controllers\LoginController;
 use \App\Http\Controllers\UserController;
 use \App\Http\Controllers\PusherController;
+use \App\Http\Controllers\TestRedisController;
+use \App\Http\Controllers\RedisSubscribeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,3 +42,5 @@ Route::any('User/check', [UserController::class,'check']);
 Route::any('Pusher/index', [PusherController::class,'index']);
 Route::any('Pusher/send', [PusherController::class,'send']);
 
+Route::any('TestRedis/index', [TestRedisController::class,'index']);
+Route::any('RedisSubscribe/index', [RedisSubscribeController::class,'index']);

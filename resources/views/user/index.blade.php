@@ -41,7 +41,7 @@
     <div style="width: 100%;">
         <div class="top_row">
             <a style="float: left" href="{{url('Admin/index')}}" class="orange_button">返回首页</a>
-            <span style="float: left" class="blue_button" id="check_btn">验证器</span>
+            {{--<span style="float: left" class="blue_button" id="check_btn">验证器</span>--}}
             <span style="float: right" class="blue_button" id="add_btn">添加用户</span>
             <span style="float: right;" class="grey_button" id="search_btn">搜索</span>
             <input type="text" id="search" style="float: right; height: 28px; margin-right: 5px;" placeholder="账号/电话">

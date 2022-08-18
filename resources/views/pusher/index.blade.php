@@ -71,10 +71,10 @@
 <body>
 <div class="content">
     <div class="top_row_line">
-        <a style="float: left" href="{:url('User/admin')}" class="orange_button">返回首页</a>
+        <a style="float: left" href="{{url('Admin/index')}}" class="orange_button">返回首页</a>
         <span class="grey_button" style="float: right" id="logout">退出</span>
-        <a class="blue_button" style="float: right" href="{:url('User/info')}">个人中心</a>
-        <span style="float: right; display: inline-block; border-bottom: 1px solid #0085ff; line-height: 29px; margin-right: 10px; padding: 0 5px;">欢迎&nbsp;{:session('uname')}&nbsp;!</span>
+        <a class="blue_button" style="float: right" href="{{url('User/info')}}">个人中心</a>
+        <span style="float: right; display: inline-block; border-bottom: 1px solid #0085ff; line-height: 29px; margin-right: 10px; padding: 0 5px;">欢迎&nbsp;{{session('uname')}}&nbsp;!</span>
     </div>
 
     <div class="layer_div" style="margin-top: 30px; width: 1155px;">
