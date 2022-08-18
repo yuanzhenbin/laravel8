@@ -5,6 +5,7 @@ use \App\Http\Controllers\IndexController;
 use \App\Http\Controllers\AdminController;
 use \App\Http\Controllers\LoginController;
 use \App\Http\Controllers\UserController;
+use \App\Http\Controllers\PusherController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,4 +37,6 @@ Route::any('User/delUser', [UserController::class,'delUser']);
 Route::any('User/addUser', [UserController::class,'addUser']);
 Route::any('User/check', [UserController::class,'check']);
 
+Route::any('Pusher/index', [PusherController::class,'index']);
+Route::any('Pusher/send', [PusherController::class,'send']);
 

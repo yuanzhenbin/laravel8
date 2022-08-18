@@ -48,6 +48,10 @@
         <div class="div_row"><a href="{{url('TestService/index')}}">服务</a></div>
         <div class="div_row"><a href="{{url('TestEvent/index')}}">事件监听订阅</a></div>
     </div>
+    <div class="div_col">
+        <div class="div_row div_line">laravel8.5功能测试</div>
+        <div class="div_row"><a href="{{url('Pusher/index')}}">广播</a></div>
+    </div>
 </div>
 </body>
 
