@@ -14,10 +14,10 @@
 <body>
 <div class="content">
     <div class="top_row_line">
-        <a style="float: left" href="{:url('User/admin')}" class="orange_button">返回首页</a>
+        <a style="float: left" href="{{url('User/admin')}}" class="orange_button">返回首页</a>
         <span class="grey_button" style="float: right" id="logout">退出</span>
-        <a class="blue_button" style="float: right" href="{:url('User/info')}">个人中心</a>
-        <span style="float: right; display: inline-block; border-bottom: 1px solid #0085ff; line-height: 29px; margin-right: 10px; padding: 0 5px;">欢迎&nbsp;{:session('uname')}&nbsp;!</span>
+        <a class="blue_button" style="float: right" href="{{url('User/info')}}">个人中心</a>
+        <span style="float: right; display: inline-block; border-bottom: 1px solid #0085ff; line-height: 29px; margin-right: 10px; padding: 0 5px;">欢迎&nbsp;{{session('uname')}}&nbsp;!</span>
     </div>
 
     <div>
@@ -58,7 +58,7 @@
             var message = $("#message").val();
 
             $.ajax({
-                url : '{:url("Message/send")}',
+                url : '{{url("TestQueue/send")}}',
                 data: {
                     message:message,
                 },
@@ -83,7 +83,7 @@
             var message = $("#message").val();
 
             $.ajax({
-                url : '{:url("Message/myQueue")}',
+                url : '{{url("TestQueue/myQueue")}}',
                 data: {
                     message:message,
                 },
@@ -106,7 +106,7 @@
         });
         $("#get_my_queue").click(function(){
             $.ajax({
-                url : '{:url("Message/getMyQueue")}',
+                url : '{{url("TestQueue/getMyQueue")}}',
                 data: {},
                 type:'POST',
                 dataType:'JSON',
@@ -129,7 +129,7 @@
         //退出
         $("#logout").click(function(){
             $.ajax({
-                url : '{:url("Login/logout")}',
+                url : '{{url("Login/logout")}}',
                 data: {},
                 type:'POST',
                 dataType:'JSON',

@@ -18,9 +18,9 @@
         <a class="blue_button" style="float: right" href="{{url('User/info')}}">个人中心</a>
         <span style="float: right; display: inline-block; border-bottom: 1px solid #0085ff; line-height: 29px; margin-right: 10px; padding: 0 5px;">欢迎&nbsp;{{session('uname')}}&nbsp;!</span>
     </div>
-    {{--<div class="div_col">--}}
-        {{--<div class="div_row div_line">技术测试</div>--}}
-        {{--<div class="div_row"><a href="{{url('Message/index')}}">redis消息队列</a></div>--}}
+    <div class="div_col">
+        <div class="div_row div_line">技术测试</div>
+        <div class="div_row"><a href="{{url('TestQueue/index')}}">redis消息队列</a></div>
         {{--<div class="div_row"><a href="{{url('Seckill/index')}}">redis秒杀</a></div>--}}
         {{--<div class="div_row"><a href="{{url('RedisPublish/index')}}">redis发布订阅</a></div>--}}
         {{--<div class="div_row"><a href="{{url('Goods/info')}}">商品详情缓存(redis)</a></div>--}}
@@ -28,7 +28,7 @@
         {{--<div class="div_row"><a href="{{url('WorkerMan/index')}}">workerman聊天室</a></div>--}}
         {{--<div class="div_row"><a href="{{url('WorkerMan/indexAnother')}}">workerman聊天室(js)</a></div>--}}
         {{--<div class="div_row"><a href="{{url('Swoole/index')}}">Swoole聊天室</a></div>--}}
-    {{--</div>--}}
+    </div>
     <div class="div_col">
         <div class="div_row div_line">系统管理</div>
         <div class="div_row"><a href="{{url('User/index')}}">用户管理</a></div>

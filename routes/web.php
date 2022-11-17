@@ -7,6 +7,7 @@ use \App\Http\Controllers\LoginController;
 use \App\Http\Controllers\UserController;
 use \App\Http\Controllers\PusherController;
 use \App\Http\Controllers\TestRedisController;
+use \App\Http\Controllers\TestQueueController;
 use \App\Http\Controllers\RedisSubscribeController;
 
 /*
@@ -33,6 +34,7 @@ Route::any('Login/logout', [LoginController::class,'logout']);
 
 Route::get('User/index', [UserController::class,'index']);
 Route::post('User/index', [UserController::class,'indexAjax']);
+Route::any('User/admin', [AdminController::class,'index']);
 Route::any('User/info', [UserController::class,'info']);
 Route::any('User/editUser', [UserController::class,'editUser']);
 Route::any('User/delUser', [UserController::class,'delUser']);
@@ -44,3 +46,5 @@ Route::any('Pusher/send', [PusherController::class,'send']);
 
 Route::any('TestRedis/index', [TestRedisController::class,'index']);
 Route::any('RedisSubscribe/index', [RedisSubscribeController::class,'index']);
+Route::any('TestQueue/index', [TestQueueController::class,'index']);
+Route::any('TestQueue/send', [TestQueueController::class,'send']);
