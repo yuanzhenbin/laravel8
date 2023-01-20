@@ -37,6 +37,7 @@ Route::post('User/index', [UserController::class,'indexAjax']);
 Route::any('User/admin', [AdminController::class,'index']);
 Route::any('User/info', [UserController::class,'info']);
 Route::any('User/editUser', [UserController::class,'editUser']);
+Route::any('User/editInfo', [UserController::class,'editInfo']);
 Route::any('User/delUser', [UserController::class,'delUser']);
 Route::any('User/addUser', [UserController::class,'addUser']);
 Route::any('User/check', [UserController::class,'check']);
@@ -48,3 +49,8 @@ Route::any('TestRedis/index', [TestRedisController::class,'index']);
 Route::any('RedisSubscribe/index', [RedisSubscribeController::class,'index']);
 Route::any('TestQueue/index', [TestQueueController::class,'index']);
 Route::any('TestQueue/send', [TestQueueController::class,'send']);
+
+
+Route::any('guangbo/index', function (){
+    broadcast(new \App\Events\MessageEvent(date('Y-m-d H:i:s').' 一条消息'));
+});

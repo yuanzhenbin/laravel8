@@ -156,4 +156,49 @@ class UserController extends BaseController
 
         return view('user/info',['data'=>$info]);
     }
+
+    //从个人中心修改信息
+    public function editInfo()
+    {
+        $id = session('uid');
+        $name = request('name','');
+        $phone = request('phone','');
+        $email = request('email','');
+        $sex = request('sex',0);
+        $password = request('password',1);
+        if(!$id) {
+            return_ajax([],0,'缺少参数');
+        }
+
+        $save_data = [];
+        $save_data['name'] = $name;
+        $save_data['phone'] = $phone;
+        $save_data['email'] = $email;
+        $save_data['sex'] = $sex;
+        $save_data['update_time'] = time();
+        if ($password) {
+            $salt = rand(10000,99999);
+            $password_salt = md5($password.$salt);
+            $save_data['password'] = $password_salt;
+            $save_data['salt'] = $salt;
+        }
+
+        DB::beginTransaction();
+        try {
+            $ret = Db::table('user')->where('id', $id)->update($save_data);
+
+            if ($ret !== false) {
+                session('uname',$name);
+                Db::commit();
+                echo json_encode(['data'=>[],'code'=>200,'message'=>'保存成功']);
+            } else {
+                Db::rollback();
+                return_ajax([], 0, '保存失败');
+            }
+        } catch (\Throwable $e) {
+            Db::rollback();
+            Db::table('log')->insert(['content'=>$e->getMessage(),'create_time'=>time()]);
+            return_ajax([], 0, '保存失败');
+        }
+    }
 }
